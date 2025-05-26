@@ -1,0 +1,173 @@
+/* Experiencia laboral */
+.experiencia-laboral {
+    background-color: #00103c;
+    color: #deba5a;
+    padding: 70px 20px;
+}
+
+.experiencia-laboral h2 {
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.experiencia-laboral .container {
+    max-width: 1200px;
+}
+
+/* Layout responsive - Como Bootstrap original */
+.experiencia-laboral .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -15px;
+}
+
+.experience-card-wrapper {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 500px;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+/* Específico para pantallas medianas y grandes */
+@media (min-width: 768px) {
+    .experience-card-wrapper {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+.experience-card {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    min-height: 280px;
+    /* Altura mínima para equilibrar las tarjetas */
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo de las tarjetas como el original */
+.experience-card:first-child {
+    background-color: #a0d8f4 !important;
+}
+
+.experience-card:not(:first-child) {
+    background-color: white !important;
+}
+
+.company-logo {
+    padding: 15px;
+    height: 100%;
+    object-fit: contain;
+    max-height: 150px;
+    width: 100%;
+}
+
+.experience-card .card-body {
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.experience-card .card-title {
+    color: #00103c;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.experience-card .card-text {
+    color: #00103c;
+    margin-bottom: 15px;
+}
+
+.experience-card .card-text.fw-medium {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+    flex-grow: 1;
+    /* Solo este ajuste para equilibrar el contenido */
+}
+
+.visit-btn {
+    background: #deba5a !important;
+    color: #00103c !important;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.visit-btn:hover {
+    background: #c9a84a !important;
+    color: #00103c !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .experiencia-laboral {
+        padding: 50px 15px;
+    }
+
+    .experiencia-laboral h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .experience-card-wrapper {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .company-logo {
+        height: 150px;
+        padding: 10px;
+    }
+
+    .experience-card .card-body {
+        padding: 15px;
+    }
+
+    .experience-card .card-title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .experiencia-laboral h2 {
+        font-size: 28px;
+    }
+
+    .company-logo {
+        height: 120px;
+    }
+
+    .experience-card .card-title {
+        font-size: 15px;
+    }
+
+    .experience-card .card-text.fw-medium {
+        font-size: 13px;
+    } }

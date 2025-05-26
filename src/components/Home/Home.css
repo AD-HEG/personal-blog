@@ -1,0 +1,126 @@
+.inicio {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url('../../assets/images/fondo-fo.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px;
+    color: #a0d8f4;
+}
+
+.inicio-contenido {
+    width: 600px;
+    max-width: 100%;
+}
+
+.inicio-contenido h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.inicio-contenido h3:nth-of-type(2) {
+    margin-bottom: 30px;
+}
+
+.inicio-contenido h3 span {
+    color: #deba5a;
+}
+
+.inicio-contenido h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+}
+
+.inicio-contenido p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.inicio-redes {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.inicio-redes a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #a0d8f4;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.inicio-redes a:hover {
+    color: #deba5a;
+    transform: translateY(-2px);
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-info {
+    border: 2px solid #a0d8f4;
+    color: #a0d8f4;
+    background: transparent;
+}
+
+.btn-outline-info:hover {
+    background: #a0d8f4;
+    color: #00103c;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .inicio {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .inicio-contenido {
+        width: 100%;
+    }
+
+    .inicio-contenido h1 {
+        font-size: 42px;
+    }
+
+    .inicio-contenido h3 {
+        font-size: 24px;
+    }
+
+    .inicio-contenido p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .inicio-contenido h1 {
+        font-size: 36px;
+    }
+
+    .inicio-contenido h3 {
+        font-size: 20px;
+    }
+
+    .inicio-contenido p {
+        font-size: 16px;
+    }
+
+    .inicio-redes {
+        justify-content: center;
+    } }

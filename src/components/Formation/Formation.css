@@ -1,0 +1,215 @@
+/* Formación */
+.formacion {
+    background-color: #00103c;
+    color: #deba5a;
+    padding: 50px 20px;
+}
+
+.formacion h2 {
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Estilos para el carrusel personalizado con animaciones mejoradas */
+.custom-carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background-color: #00103c;
+}
+
+.slides-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    display: none;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    display: block;
+}
+
+.slide-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-image {
+    width: 100%;
+    height: 100%;
+}
+
+.slide-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+    transition: filter 0.5s ease;
+}
+
+.slide.active .slide-image img {
+    filter: brightness(0.8);
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    right: 10%;
+    background-color: rgba(0, 16, 60, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.5s ease 0.3s, opacity 0.5s ease 0.3s;
+}
+
+.slide.active .slide-caption {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.slide-caption h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #deba5a;
+    margin-bottom: 10px;
+}
+
+.slide-caption p {
+    font-size: 16px;
+    color: white;
+    margin: 0;
+}
+
+/* Controles de navegación */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 10;
+}
+
+.prev-btn,
+.next-btn {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 16, 60, 0.7);
+    border: none;
+    border-radius: 50%;
+    color: #deba5a;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    opacity: 0.7;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: rgba(0, 16, 60, 0.9);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(222, 186, 90, 0.5);
+    opacity: 1;
+}
+
+/* Indicadores */
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.indicator {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    margin: 0 5px;
+}
+
+.indicator:hover {
+    background-color: rgba(222, 186, 90, 0.7);
+    transform: scale(1.1);
+}
+
+.indicator.active {
+    background-color: #deba5a;
+    transform: scale(1.2);
+    box-shadow: 0 0 8px rgba(222, 186, 90, 0.8);
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .slides-container {
+        height: 400px;
+    }
+
+    .slide-caption {
+        padding: 15px;
+    }
+
+    .slide-caption h3 {
+        font-size: 20px;
+    }
+
+    .prev-btn,
+    .next-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .slides-container {
+        height: 350px;
+    }
+
+    .slide-caption {
+        left: 5%;
+        right: 5%;
+        padding: 10px;
+    }
+
+    .slide-caption h3 {
+        font-size: 18px;
+    }
+
+    .slide-caption p {
+        font-size: 14px;
+    } }

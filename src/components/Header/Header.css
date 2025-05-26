@@ -1,0 +1,160 @@
+/* Header principal */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: all 0.5s ease;
+}
+
+/* Logo */
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #deba5a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo:hover {
+    color: #deba5a;
+    text-decoration: none;
+}
+
+/* Navegación Desktop */
+.navbar-desktop {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-desktop a {
+    display: inline-block;
+    font-size: 20px;
+    color: #deba5a;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.navbar-desktop a:hover {
+    color: #a0d8f4;
+    text-decoration: none;
+}
+
+/* Estilo especial para el enlace de API */
+.api-link {
+    background: linear-gradient(45deg, #deba5a, #a0d8f4) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    font-weight: 600 !important;
+    position: relative;
+}
+
+.api-link::after {
+    content: '🔗';
+    margin-left: 5px;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+    display: none;
+    color: #deba5a;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 101;
+}
+
+/* Navegación móvil */
+.navbar-mobile {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #00103c;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-top: 1px solid #deba5a;
+}
+
+.navbar-mobile.active {
+    max-height: 300px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    padding: 15px 0;
+}
+
+.navbar-mobile a {
+    display: block;
+    color: #deba5a;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(222, 186, 90, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.navbar-mobile a:hover {
+    background-color: rgba(222, 186, 90, 0.1);
+    color: #a0d8f4;
+    text-decoration: none;
+    padding-left: 30px;
+}
+
+.navbar-mobile a:last-child {
+    border-bottom: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 5%;
+    }
+
+    .navbar-desktop {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 8px 4%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu-toggle {
+        font-size: 22px;
+    }
+
+    .navbar-mobile a {
+        font-size: 16px;
+        padding: 10px 15px;
+    } }
